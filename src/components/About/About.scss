@@ -1,0 +1,42 @@
+@use "../../styles/index.scss" as *;
+
+.about {
+  height: 80vh;
+  padding-bottom: 10rem;
+  margin-top: 10rem;
+  .wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  &__content {
+    height: 100%;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    h2 {
+      @include h2-styling;
+      width: 65%;
+      span {
+        color: var(--orange);
+      }
+    }
+
+    p {
+      @include body-styling(var(--grey));
+      width: 70%;
+    }
+  }
+
+  &__img {
+    background-image: url(../../assets/shared/desktop/image-best-gear.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 48%;
+    border-radius: 8px;
+  }
+}

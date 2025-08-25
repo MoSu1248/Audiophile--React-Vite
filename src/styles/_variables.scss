@@ -1,0 +1,72 @@
+/* Resuable Variables */
+
+/* ROOT VARIABLES */
+
+:root {
+  /* Colors */
+  --orange: #d87d4a;
+  --light-orange: #fbaf85;
+  --dark-grey: #191919;
+  --grey:#5a5a5a;
+  --grey-back: #f6f6f6;
+  --light-grey: #f1f1f1;
+  --grey-btn: #4c4c4c;
+  --lightest-grey: #5c5c5c85;
+  --off-white: #fafafa;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Typography */
+  --font-family: "Manrope", sans-serif;
+
+  /* Font Sizing */
+
+  --h1-font-size: 3.5rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1.75rem;
+  --h5-font-size: 1.5rem;
+  --h6-font-size: 1.125rem;
+  --overline-font-size: 0.875rem;
+  --sub-title-font-size: 0.8125rem;
+  --body-font-size: 0.9375rem;
+
+  /* Font Weights */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+/* SCSS VARIABLES  */
+
+/* Breakpoints */
+$bp-mobile: 40.625em; // 600px
+$bp-tablet: 56.25em; // 900px
+$bp-desktop: 75em; // 1200px
+
+/* Line Heights */
+$line-height: (
+  h1: 1.04,
+  h2: 1.1,
+  h3: 1.125,
+  h4: 1.357,
+  h5: 1.375,
+  h6: 1.333,
+  Overline: 1.357,
+  Subtitle: 1.923,
+  body: 1.667,
+);
+
+/* Letter Spacing */
+
+$letter-spacing: (
+  h1: 2px,
+  h2: 1.5px,
+  h3: 1.15px,
+  h4: 2px,
+  h5: 1.7px,
+  h6: 1.3px,
+  Overline: 10px,
+  Subtitle: 1px,
+);

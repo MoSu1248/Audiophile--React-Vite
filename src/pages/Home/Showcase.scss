@@ -1,0 +1,122 @@
+@use "../../styles/index.scss" as *;
+
+.showcase {
+  margin-top: 10rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.showcase__item-1 {
+  display: flex;
+  background-color: var(--orange);
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 8px;
+
+  & > img {
+    position: absolute;
+    left: -100px;
+  }
+
+  .showcase__img {
+    z-index: 1;
+    width: 60%;
+    img {
+      bottom: -130px;
+      left: 180px;
+      position: relative;
+      height: 80%;
+    }
+  }
+
+  &-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 1;
+    h2 {
+      @include h1-styling(var(--white));
+      width: 50%;
+    }
+    p {
+      @include body-styling(var(--white));
+      width: 50%;
+    }
+    button {
+      @include button-1-stying;
+      background-color: var(--black);
+      width: fit-content;
+
+      &:hover {
+        background-color: var(--grey-btn);
+      }
+    }
+  }
+}
+.showcase__item-2 {
+  background-image: url(../../assets/home/desktop/image-speaker-zx7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35vh;
+  border-radius: 8px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    height: 100%;
+    padding: 0 7rem;
+    h4 {
+      @include h4-styling;
+    }
+
+    button {
+      @include button-2-styling;
+      width: fit-content;
+    }
+  }
+}
+.showcase__item-3 {
+  display: flex;
+  gap: 3rem;
+
+  &-img {
+    width: 50%;
+    border-radius: 8px;
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    width: 50%;
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+
+    padding: 0 7rem;
+    h4 {
+      @include h4-styling;
+    }
+
+    button {
+      @include button-2-styling;
+      width: fit-content;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/*NAVBAR STYLING*/
+
+.navbar {
+  width: 100%;
+  background-color: var(--dark-grey);
+  color: white;
+  height: 10vh;
+
+  .navbar__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--lightest-grey);
+  }
+}

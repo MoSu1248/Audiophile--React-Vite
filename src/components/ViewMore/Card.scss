@@ -1,0 +1,39 @@
+@use "../../styles/index.scss" as *;
+
+.view__card {
+  background-color: var(--grey-back);
+  border-radius: 8px;
+  margin-top: 10rem;
+  width: 31%;
+  height: 100%;
+  text-align: center;
+  .view__card-img {
+    margin: 0 auto;
+    margin-top: -100px; /* Adjust this value to control how high the image floats */
+    position: relative; /* Use relative positioning to work with z-index */
+    z-index: 2; /* Ensures the image stays on top of the card */
+
+    width: 250px;
+    height: auto;
+    height: 220px;
+
+    img {
+      height: fit-content;
+      width: 100%;
+    }
+  }
+
+  h6 {
+    @include h6-styling;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    @include button-3-styling(var(--grey));
+    text-decoration: none;
+
+    .arrow-icon {
+      margin-left: 1rem;
+    }
+  }
+}

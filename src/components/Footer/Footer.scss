@@ -1,0 +1,38 @@
+@use "../../styles/index.scss" as *;
+
+.footer {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: 3rem 0;
+
+  .orange-bar {
+    background-color: var(--orange);
+    height: 0.25rem;
+    width: 6.313rem;
+    position: relative;
+    top: -48px;
+    left: 18.5%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .goal {
+    @include body-styling;
+    color: var(--grey);
+    width: 45%;
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,130 @@
+@use "./variables" as vars;
+
+/* Mixin Styling */
+
+@mixin h1-styling($color: var(--black)) {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: h1);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h1);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin h2-styling($color: var(--black)) {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: h2);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h2);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin h3-styling($color: var(--black)) {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: h3);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h3);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin h4-styling($color: var(--black)) {
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: h4);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h4);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin h5-styling($color: var(--black)) {
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: h5);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h5);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin h6-styling($color: var(--black)) {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: h6);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h6);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin overline-styling($color: var(--orange)) {
+  font-size: var(--overline-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: map-get($map: vars.$line-height, $key: Overline);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: Overline);
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin sub-title-styling($color: var(--orange)) {
+  font-size: var(--overline-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: Subtitle);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: Subtitle);
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin body-styling($color: var(--black)) {
+  font-size: var(--body-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: map-get($map: vars.$line-height, $key: body);
+  color: $color;
+}
+
+@mixin global-btn-styling {
+  padding: 0.7rem 1.7rem;
+  font-size: var(--sub-title-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: map-get($map: vars.$line-height, $key: body);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+@mixin button-1-stying {
+  @include global-btn-styling;
+  background-color: var(--orange);
+  color: var(--white);
+  border: 1px solid transparent;
+  &:hover {
+    background-color: var(--light-orange);
+  }
+}
+
+@mixin button-2-styling {
+  @include global-btn-styling;
+  background: transparent;
+  border: 1px solid var(--black);
+  color: var(--black);
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--black);
+  }
+}
+
+@mixin button-3-styling($color: var(--orange)) {
+  @include global-btn-styling;
+  color: $color;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    color: var(--orange);
+  }
+}
