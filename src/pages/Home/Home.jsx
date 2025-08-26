@@ -3,7 +3,7 @@ import ViewMore from "../../components/ViewMore/ViewMore";
 import "./Home.scss";
 import Showcase from "./Showcase";
 import About from "../../components/About/About";
-import Footer from "../../components/Footer/Footer";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -18,7 +18,9 @@ export default function Home() {
               made for the passionate music enthusiast.
             </p>
 
-            <button className="hero-btn">See Product</button>
+            <NavLink to={"/category/headphones/product/1"} className="hero-btn">
+              See Product
+            </NavLink>
           </div>
         </div>
       </section>
@@ -26,7 +28,6 @@ export default function Home() {
       <ViewMore />
       <Showcase />
       <About />
-      <Footer />
     </div>
   );
 }

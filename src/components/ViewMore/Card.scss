@@ -31,6 +31,7 @@
   a {
     @include button-3-styling(var(--grey));
     text-decoration: none;
+    margin-bottom: 2rem;
 
     .arrow-icon {
       margin-left: 1rem;

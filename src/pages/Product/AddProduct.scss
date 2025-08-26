@@ -1,0 +1,30 @@
+@use "../../styles/index.scss" as *;
+
+.product__interactions {
+  display: flex;
+  height: 3rem;
+  gap: 2rem;
+  .counter {
+    width: 10rem;
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .count {
+      font-weight: var(--font-weight-bold);
+    }
+
+    .btn {
+      background-color: transparent;
+      border: none;
+      color: var(--lightest-grey);
+      font-size: 1rem;
+    }
+  }
+
+  .product__btn {
+    @include button-1-stying;
+  }
+}

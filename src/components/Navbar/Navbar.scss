@@ -1,9 +1,10 @@
+@use "../../styles/index.scss" as *;
+
 /*NAVBAR STYLING*/
 
 .navbar {
   width: 100%;
   background-color: var(--dark-grey);
-  color: white;
   height: 10vh;
 
   .navbar__container {

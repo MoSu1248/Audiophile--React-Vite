@@ -1,5 +1,5 @@
 @use "../../styles/index.scss" as *;
 
-.copyright{
-    @include body-styling;
+.copyright {
+  @include body-styling(var(--grey));
 }

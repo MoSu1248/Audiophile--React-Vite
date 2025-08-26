@@ -1,0 +1,16 @@
+@use "../../styles/index.scss" as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 2rem;
+
+  h3 {
+    @include h3-styling;
+  }
+
+  p {
+    @include body-styling(var(--lightest-grey-text));
+  }
+}

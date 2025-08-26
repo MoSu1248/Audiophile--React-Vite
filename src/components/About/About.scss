@@ -1,17 +1,17 @@
 @use "../../styles/index.scss" as *;
 
 .about {
-  height: 80vh;
-  padding-bottom: 10rem;
+  height: 90vh;
   margin-top: 10rem;
   .wrapper {
     display: flex;
+    flex-direction: row!important;
     height: 100%;
   }
 
   &__content {
     height: 100%;
-    width: 52%;
+    width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -19,7 +19,7 @@
 
     h2 {
       @include h2-styling;
-      width: 65%;
+      width: 80%;
       span {
         color: var(--orange);
       }
@@ -27,16 +27,16 @@
 
     p {
       @include body-styling(var(--grey));
-      width: 70%;
+      width: 95%;
     }
   }
 
   &__img {
     background-image: url(../../assets/shared/desktop/image-best-gear.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 100%;
-    width: 48%;
+    width: 50%;
     border-radius: 8px;
   }
 }

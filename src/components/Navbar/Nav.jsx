@@ -7,16 +7,24 @@ export default function Nav() {
     <div className="nav">
       <ul className="nav__list">
         <li className="nav__item">
-          <a className="nav__link">Home</a>
+          <NavLink to={"/"} className="nav__link">
+            Home
+          </NavLink>
         </li>
         <li className="nav__item">
-          <a className="nav__link">Headphones</a>
+          <NavLink to="/category/headphones" className="nav__link">
+            Headphones
+          </NavLink>
         </li>
         <li className="nav__item">
-          <a className="nav__link">Speakers</a>
+          <NavLink to={"/category/speakers"} className="nav__link">
+            Speakers
+          </NavLink>
         </li>
         <li className="nav__item">
-          <a className="nav__link">Earphones</a>
+          <NavLink to={"/category/earphones"} className="nav__link">
+            Earphones
+          </NavLink>
         </li>
       </ul>
     </div>

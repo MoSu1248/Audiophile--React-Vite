@@ -1,0 +1,20 @@
+.product {
+  margin-top: 10rem;
+  padding-bottom: 10rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
+
+.product_info {
+  display: flex;
+  gap: 8rem;
+}
+
+.product {
+  .view {
+    margin-top: 8rem;
+  }
+}

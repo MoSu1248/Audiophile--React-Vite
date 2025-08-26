@@ -1,3 +1,5 @@
+@use "../../styles/index.scss" as *;
+
 /*NAV STYLING*/
 
 .nav {
@@ -12,5 +14,10 @@
   &__item {
     text-transform: uppercase;
     font-size: 13px;
+
+    .nav__link {
+      text-decoration: none;
+      @include sub-title-styling(var(--white))
+    }
   }
 }

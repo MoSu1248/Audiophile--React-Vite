@@ -4,6 +4,7 @@ import Speaker_zx7 from "../../assets/home/desktop/image-speaker-zx7.jpg";
 import Earphones from "../../assets/home/desktop/image-earphones-yx1.jpg";
 import CircleBackground from "../../assets/home/desktop/pattern-circles.svg";
 import "./Showcase.scss";
+import { NavLink } from "react-router-dom";
 
 export default function Showcase() {
   return (
@@ -20,13 +21,17 @@ export default function Showcase() {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <button>See Product</button>
+            <NavLink to={"/category/speakers/product/4"} className="button">
+              See Product
+            </NavLink>
           </div>
         </div>
         <div className="showcase__item-2">
           <div className="showcase__item-2-content">
             <h4>ZX7 SPEAKER</h4>
-            <button>See Product</button>
+            <NavLink to={"/category/speakers/product/5"} className="button">
+              See Product
+            </NavLink>
           </div>
         </div>
         <div className="showcase__item-3">
@@ -35,7 +40,9 @@ export default function Showcase() {
           </div>
           <div className="showcase__item-3-content">
             <h4>YX1 EARPHONES</h4>
-            <button>See Product</button>
+            <NavLink to={"/category/earphones/product/6"} className="button">
+              See Product
+            </NavLink>
           </div>
         </div>
       </div>

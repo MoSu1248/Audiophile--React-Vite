@@ -1,0 +1,13 @@
+@use "../../styles/index.scss" as *;
+
+.catagory__hero {
+  background-color: var(--dark-grey);
+  padding: 6rem;
+  margin-bottom: 10rem;
+  .wrapper {
+    h2 {
+      @include h2-styling(var(--white));
+      text-align: center;
+    }
+  }
+}

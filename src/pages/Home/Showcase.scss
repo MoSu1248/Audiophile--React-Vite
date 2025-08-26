@@ -49,7 +49,7 @@
       @include body-styling(var(--white));
       width: 50%;
     }
-    button {
+    .button {
       @include button-1-stying;
       background-color: var(--black);
       width: fit-content;
@@ -79,7 +79,7 @@
       @include h4-styling;
     }
 
-    button {
+    .button {
       @include button-2-styling;
       width: fit-content;
     }
@@ -114,7 +114,7 @@
       @include h4-styling;
     }
 
-    button {
+    .button {
       @include button-2-styling;
       width: fit-content;
     }
