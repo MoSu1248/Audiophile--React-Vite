@@ -6,7 +6,7 @@ export const speakersDetails = {
   products: [
     {
       id: 4,
-      name: "zx9 Speaker",
+      name: "zx9",
       price: 4500,
       status: "New",
       images: zx9,
@@ -32,7 +32,7 @@ export const speakersDetails = {
     },
     {
       id: 5,
-      name: "zx7 Speaker",
+      name: "zx7",
       price: 3500,
       status: " ",
       images: zx7,

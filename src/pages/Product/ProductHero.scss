@@ -1,9 +1,15 @@
+@use "../../styles/index.scss" as *;
+
 .product__card {
   .product__content {
     gap: 3rem;
     .product__description {
       color: var(--lightest-grey-text);
       width: 80%;
+    }
+
+    .product__price {
+      @include h6-styling;
     }
   }
 }

@@ -10,7 +10,7 @@ export const headphonesDetails = {
   products: [
     {
       id: 1,
-      name: "XX99 Mark II headphones",
+      name: "XX99 Mark II ",
       price: 2999,
       status: "New",
       images: xx99_mark_2Images,
@@ -36,7 +36,7 @@ export const headphonesDetails = {
     },
     {
       id: 2,
-      name: "XX99 Mark I headphones",
+      name: "XX99 Mark I ",
       price: 1750,
       status: " ",
       images: xx99_mark_1Images,
@@ -61,7 +61,7 @@ export const headphonesDetails = {
     },
     {
       id: 3,
-      name: "XX59 headphones",
+      name: "XX59 ",
       price: 899,
       status: " ",
       images: xx59Images,

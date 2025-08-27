@@ -20,7 +20,18 @@
       background-color: transparent;
       border: none;
       color: var(--lightest-grey);
-      font-size: 1rem;
+      font-size: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      pointer-events: auto;
+      &:hover {
+        color: var(--orange);
+      }
+    }
+
+    .btn.disabled {
+      pointer-events: none;
     }
   }
 

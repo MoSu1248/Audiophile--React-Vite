@@ -13,8 +13,8 @@ export default function ViewMore() {
           img={HeadPhone}
           url={"/category/headphones"}
         />
-        <Card title={"Speaker"} img={Speaker} to={""} />
-        <Card title={"Earphone"} img={EarPhone} to={""} />
+        <Card title={"Speaker"} img={Speaker} url={"/category/speakers"} />
+        <Card title={"Earphone"} img={EarPhone} url={"/category/earphones"} />
       </div>
     </section>
   );
