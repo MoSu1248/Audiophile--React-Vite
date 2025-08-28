@@ -7,11 +7,27 @@
   width: 31%;
   height: 100%;
   text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover p {
+    color: var(--orange);
+
+    & .arrow-icon {
+      margin-left: 2rem;
+    }
+  }
+
+  &:hover .view__card-img {
+   transform: translateY(-1rem);
+  }
+
   .view__card-img {
     margin: 0 auto;
-    margin-top: -100px; /* Adjust this value to control how high the image floats */
-    position: relative; /* Use relative positioning to work with z-index */
-    z-index: 2; /* Ensures the image stays on top of the card */
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s ease;
 
     width: 250px;
     height: auto;
@@ -28,12 +44,14 @@
     margin-bottom: 2rem;
   }
 
-  a {
+  p {
     @include button-3-styling(var(--grey));
     text-decoration: none;
     margin-bottom: 2rem;
 
     .arrow-icon {
+      transition: 0.3s ease;
+
       margin-left: 1rem;
     }
   }

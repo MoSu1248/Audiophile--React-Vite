@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../Navbar/Nav";
-import Logo from "../Navbar/Logo";
+import Logo from "../Logo/Logo";
 import "./Footer.scss";
 import Socials from "./Socials";
 import Copyright from "./copyright";
@@ -10,7 +10,8 @@ export default function Footer() {
       <div className="orange-bar"></div>
       <div className="wrapper">
         <div className="footer__navbar">
-          <Logo /> <Nav />
+          <Logo />
+          <Nav />
         </div>
 
         <div className="footer__content">

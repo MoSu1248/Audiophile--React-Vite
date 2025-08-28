@@ -2,13 +2,14 @@ import React from "react";
 import { categoriesDetails } from "../../data/index";
 import { useParams } from "react-router-dom";
 import ProductHero from "./ProductHero";
-import "./ProductPage.scss";
 import Features from "./Features";
 import IncludedItems from "./IncludedItems";
 import ProductGallery from "./ProductGallery";
 import RelatedProducts from "./RelatedProducts";
 import About from "../../components/About/About";
 import ViewMore from "../../components/ViewMore/ViewMore";
+import GoBack from "../../components/BackBtn/GoBackButton";
+import "./ProductPage.scss";
 
 export default function ProductPage() {
   const { slug, productId } = useParams();
@@ -20,6 +21,7 @@ export default function ProductPage() {
   return (
     <section className="product">
       <div className="wrapper">
+        <GoBack />
         <ProductHero product={product} />
         <div className="product_info">
           <Features product={product} />

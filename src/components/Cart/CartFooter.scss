@@ -1,0 +1,31 @@
+@use "../../styles/index.scss" as *;
+
+.cart__footer {
+  height: fit-content;
+  .cart__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    p {
+      @include body-styling(var(--lightest-grey));
+      text-transform: uppercase;
+    }
+
+    .cart__total-value {
+      @include h6-styling;
+    }
+  }
+
+  .cart__button {
+    @include button-1-stying(100%);
+    width: 100% !important;
+    display: block;
+    text-align: center;
+
+    &.disabled {
+      @include button-1-stying;
+      background-color: var(--light-orange);
+      pointer-events: none;
+    }
+  }
+}

@@ -93,12 +93,12 @@
   transition: 0.3s ease;
 }
 
-@mixin button-1-stying {
+@mixin button-1-stying($width: fit-content) {
   @include global-btn-styling;
   background-color: var(--orange);
   color: var(--white);
   border: 1px solid transparent;
-  width: fit-content;
+  width: $width;
   text-decoration: none;
   &:hover {
     background-color: var(--light-orange);

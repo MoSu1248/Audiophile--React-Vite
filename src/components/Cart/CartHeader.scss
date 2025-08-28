@@ -1,0 +1,29 @@
+/* CART HEADER STYLING */
+@use "../../styles/index.scss" as *;
+
+.cart__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  h6 {
+    @include h6-styling;
+  }
+
+  .remove-all__btn {
+    @include body-styling;
+    border: none;
+    background-color: transparent;
+    color: var(--lightest-grey);
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--orange);
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

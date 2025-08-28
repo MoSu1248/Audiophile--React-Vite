@@ -8,10 +8,7 @@ import { useLocation } from "react-router-dom";
 export default function Layout() {
   const currentLocation = useLocation();
   useEffect(() => {
-    window.scroll({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo(0, 0); 
   }, [currentLocation]);
 
   return (

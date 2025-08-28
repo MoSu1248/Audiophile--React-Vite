@@ -1,11 +1,12 @@
 @use "../../styles/index.scss" as *;
 
 .about {
-  height: 90vh;
+  height: 60vh;
   margin-top: 10rem;
+  margin-bottom: 10rem;
   .wrapper {
     display: flex;
-    flex-direction: row!important;
+    flex-direction: row !important;
     height: 100%;
   }
 
@@ -27,14 +28,14 @@
 
     p {
       @include body-styling(var(--grey));
-      width: 95%;
+      width: 85%;
     }
   }
 
   &__img {
     background-image: url(../../assets/shared/desktop/image-best-gear.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 100%;
     width: 50%;
     border-radius: 8px;

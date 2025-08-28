@@ -1,6 +1,6 @@
 import React from "react";
 import "./CatagoryCard.scss";
-import { NavLink } from "react-router-dom";
+import ViewProductButton from "../../components/ViewProductButton/ViewProductButton";
 
 export default function CatagoryCard({ category }) {
   return (
@@ -17,12 +17,9 @@ export default function CatagoryCard({ category }) {
               </p>
               <h2>{p.name} </h2>
               <p>{p.description}</p>
-              <NavLink
-                className="button"
-                to={`/category/${category.slug}/product/${p.id}`}
-              >
-                See Product
-              </NavLink>
+              <ViewProductButton
+                url={`/category/${category.slug}/product/${p.id}`}
+              />
             </div>
           </div>
         ))}

@@ -17,7 +17,18 @@
 
     .nav__link {
       text-decoration: none;
-      @include sub-title-styling(var(--white))
+      @include sub-title-styling(var(--white));
+      transition: 0.3s ease-out;
+      display: inline-block;
+
+      &:hover {
+        color: var(--orange);
+      }
+
+      &.active {
+        transform: scale(1.05);
+        color: var(--orange);
+      }
     }
   }
 }

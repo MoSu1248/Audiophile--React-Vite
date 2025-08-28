@@ -1,0 +1,83 @@
+@use "../../styles/index.scss" as *;
+
+.summary {
+  padding: 2rem;
+  width: 35%;
+  border-radius: 8px;
+  background-color: var(--white);
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  &__header {
+    @include h6-styling;
+  }
+
+  .summary__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 20rem;
+    justify-content: center;
+    overflow-y: auto;
+    padding-top: 5rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  .payment__method-title {
+    @include body-styling;
+    font-size: 12px;
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s ease;
+
+  .radio__button {
+    width: 5% !important;
+  }
+}
+
+.radio-option input[type="radio"] {
+  accent-color: var(--orange); /* orange highlight for the circle */
+  width: 20px;
+  height: 20px;
+}
+
+.radio-option input[type="radio"]:checked {
+  border-color: var(--orange);
+}
+
+.radio-option:hover {
+  border-color: #999;
+}
+
+.radio-option input:checked ~ span {
+  font-weight: var(--font-weight-bold);
+}
+
+.radio-option input[type="radio"]:checked ~ span,
+.radio-option:has(input[type="radio"]:checked) {
+  border-color: var(--orange); /* orange border on selected */
+  background: #fff;
+}

@@ -1,0 +1,32 @@
+.cart-counter {
+  margin-left: auto;
+  width: 7rem;
+  background-color: var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+
+  .count {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .btn {
+    height: 2.5rem;
+    width: 2rem;
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: transparent;
+    border: none;
+    color: var(--lightest-grey);
+    font-size: 1.2rem;
+    &:hover {
+      color: var(--orange);
+    }
+  }
+
+  .btn.disabled {
+    pointer-events: none;
+  }
+}

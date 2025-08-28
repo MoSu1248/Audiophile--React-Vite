@@ -3,7 +3,8 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import CategoryPage from "./pages/Catagory/Catagory";
 import ProductPage from "./pages/Product/ProductPage";
-import {CartProvider} from "./components/CartProvider/CartProvider";
+import { CartProvider } from "./components/CartProvider/CartProvider";
+import CheckOut from "./pages/Checkout/CheckOut";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
               path="/category/:slug/product/:productId"
               element={<ProductPage />}
             />
+            <Route path="/checkout" element={<CheckOut/> }></Route>
           </Route>
         </Routes>
       </CartProvider>

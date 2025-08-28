@@ -1,0 +1,67 @@
+@use "../../styles/index.scss" as *;
+
+.form-section {
+  .form__header {
+    @include sub-title-styling;
+    margin-bottom: 1rem;
+  }
+}
+
+.form__grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem 2rem; /* row gap 1rem, column gap 2rem */
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    label {
+      @include body-styling;
+      font-size: 13px;
+      font-weight: var(--font-weight-bold);
+    }
+
+    input {
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: var(--font-family);
+      border: 1px solid var(--input-border-grey);
+      color: var(--input-border-grey);
+      width: 100%;
+      font-weight: var(--font-weight-bold);
+
+      &::placeholder {
+        /* Standard syntax */
+        color: var(--lightest-grey);
+      }
+
+      &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: var(--lightest-grey);
+      }
+
+      &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: var(--lightest-grey);
+        opacity: 1; /* Firefox adds a lower opacity by default, so set to 1 */
+      }
+
+      &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: var(--lightest-grey);
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--lightest-grey);
+      }
+    }
+  }
+
+  .address-group {
+    grid-column: span 2;
+  }
+}

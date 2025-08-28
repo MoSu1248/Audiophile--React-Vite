@@ -1,6 +1,7 @@
 import React from "react";
 import AddProduct from "./AddProduct";
 import "./ProductHero.scss";
+import GoBack from "../../components/BackBtn/GoBackButton";
 
 export default function ProductHero({ product }) {
   (999).toLocaleString(); // "999"

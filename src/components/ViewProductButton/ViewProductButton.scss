@@ -1,0 +1,6 @@
+
+@use "../../styles/index.scss" as *;
+
+.view__product-btn {
+  @include button-1-stying;
+}
