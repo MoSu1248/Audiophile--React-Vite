@@ -1,5 +1,8 @@
 @use "../../styles/index.scss" as *;
 
+.stagger-children {
+}
+
 .view__card {
   background-color: var(--grey-back);
   border-radius: 8px;
@@ -8,7 +11,10 @@
   height: 100%;
   text-align: center;
   cursor: pointer;
-  text-decoration: none;
+
+  &-link {
+    text-decoration: none;
+  }
 
   &:hover p {
     color: var(--orange);
@@ -19,7 +25,7 @@
   }
 
   &:hover .view__card-img {
-   transform: translateY(-1rem);
+    transform: translateY(-1rem);
   }
 
   .view__card-img {

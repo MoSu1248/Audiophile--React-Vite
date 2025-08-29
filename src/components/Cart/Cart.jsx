@@ -16,7 +16,7 @@ export default function Cart() {
       onMouseEnter={() => setOpenCart(true)}
       onMouseLeave={() => setOpenCart(false)}
     >
-      <img src={CartIcon} alt="" />
+      <img src={CartIcon} />
       {openCart && (
         <>
           <div

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../components/CartProvider/CartProvider";
-import SummaryItems from "./SummaryItems";
+import SummaryList from "./SummaryList";
 import SummaryFooter from "./SummaryFooter";
 import "./Summary.scss";
 
@@ -15,7 +15,7 @@ export default function Summary() {
   return (
     <div className="summary">
       <h6 className="summary__header">Summary</h6>
-      <SummaryItems cart={cart} formatNumber={formatNumber} />
+      <SummaryList cart={cart} formatNumber={formatNumber} />
       <SummaryFooter cart={cart} formatNumber={formatNumber} />
     </div>
   );

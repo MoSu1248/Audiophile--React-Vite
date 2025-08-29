@@ -8,6 +8,13 @@
     h2 {
       @include h2-styling(var(--white));
       text-align: center;
+      margin: auto;
+      width: 100%;
+    }
+
+    .catagory__hero-stagger {
+     
+   
     }
   }
 }

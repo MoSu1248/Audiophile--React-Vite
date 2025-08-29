@@ -1,10 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./AddProduct.scss";
 import { CartContext } from "../../components/CartProvider/CartProvider";
+import { motion } from "framer-motion";
+
 export default function AddProduct({ product }) {
   const { addItem } = useContext(CartContext);
 
   const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    setCount(1);
+  }, [product.id]);
 
   function increase() {
     setCount(count + 1);
@@ -25,8 +31,22 @@ export default function AddProduct({ product }) {
     addItem(item);
   }
 
+  const product_buttons = {
+    hidden: { opacity: 0, y: 15 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut", delay: 0.8 },
+    },
+  };
+
   return (
-    <div className="product__interactions">
+    <motion.div
+      className="product__interactions"
+      variants={product_buttons}
+      initial="hidden"
+      animate="show"
+    >
       <div className="counter">
         <button
           className={count <= 1 ? "btn disabled" : "btn "}
@@ -42,6 +62,6 @@ export default function AddProduct({ product }) {
       <button className="product__btn" onClick={onAdditem}>
         Add to cart
       </button>
-    </div>
+    </motion.div>
   );
 }

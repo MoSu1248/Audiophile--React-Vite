@@ -1,7 +1,7 @@
 import React from "react";
 import AddProduct from "./AddProduct";
 import "./ProductHero.scss";
-import GoBack from "../../components/BackBtn/GoBackButton";
+import { motion } from "framer-motion";
 
 export default function ProductHero({ product }) {
   (999).toLocaleString(); // "999"
@@ -12,21 +12,66 @@ export default function ProductHero({ product }) {
     return num.toLocaleString("en-US");
   }
 
+  const product_img = {
+    hidden: { opacity: 0, y: 15 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut", delay: 0.2 },
+    },
+  };
+
+  const product_header = {
+    hidden: { opacity: 0, y: 15 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut", delay: 0.4 },
+    },
+  };
+
+  const product_body = {
+    hidden: { opacity: 0, y: 15 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut", delay: 0.6 },
+    },
+  };
+
   return (
     <div className="product__card">
-      <div className="product__img">
+      <motion.div
+        className="product__img"
+        variants={product_img}
+        initial="hidden"
+        animate="show"
+      >
         <img src={product.images.preview} alt="" />
-      </div>
-
+      </motion.div>
       <div className="product__content">
-        <p className={product.status !== "New" ? "display" : "overline"}>
-          New Product
-        </p>
-        <h2>
-          {product.name} {product.categorySlug}
-        </h2>
-        <p className="product__description">{product.description}</p>
-        <p className="product__price">${formatNumber(product.price)}</p>
+        <motion.div
+          className="product__header"
+          variants={product_header}
+          initial="hidden"
+          animate="show"
+        >
+          <p className={product.status !== "New" ? "display" : "overline"}>
+            New Product
+          </p>
+          <h2>
+            {product.name} {product.categorySlug}
+          </h2>
+        </motion.div>
+        <motion.div
+          className="product__body"
+          variants={product_body}
+          initial="hidden"
+          animate="show"
+        >
+          <p className="product__description">{product.description}</p>
+          <p className="product__price">${formatNumber(product.price)}</p>
+        </motion.div>
         <AddProduct product={product} />
       </div>
     </div>
