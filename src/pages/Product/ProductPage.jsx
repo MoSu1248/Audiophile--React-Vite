@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { categoriesDetails } from "../../data/index";
 import { useParams } from "react-router-dom";
 import ProductHero from "./ProductHero";
@@ -15,6 +15,8 @@ export default function ProductPage() {
   const { slug, productId } = useParams();
   const category = categoriesDetails[slug];
   const product = category.products.find((p) => p.id === Number(productId));
+
+  const [deviceType, setDeviceType] = useState("desktop");
 
   if (!product) return <p>Product not found</p>;
 

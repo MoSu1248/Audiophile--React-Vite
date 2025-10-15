@@ -1,7 +1,7 @@
 @use "../../styles/index.scss" as *;
 
 .product__card-container {
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
     gap: 8rem;
@@ -12,9 +12,17 @@
   display: flex;
   gap: 5rem;
 
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
   .product__img {
     height: 100%;
     width: 50%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
     img {
       height: 100%;
       border-radius: 8px;
@@ -29,22 +37,31 @@
     justify-content: center;
     gap: 2rem;
 
-    .overline{
+    @media (max-width: 900px) {
+      width: 100%;
+      text-align: center;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .overline {
       @include overline-styling;
     }
 
     .display {
-      display: none
+      display: none;
     }
 
     h2 {
       @include h2-styling;
       width: 70%;
-      
     }
 
     P {
       @include body-styling;
+      @media (max-width: 900px) {
+        width: 80%;
+      }
     }
 
     .button {
@@ -54,5 +71,9 @@
 
   &:nth-child(even) {
     flex-direction: row-reverse;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
   }
 }

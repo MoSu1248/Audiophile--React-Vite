@@ -12,15 +12,27 @@
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 1rem 2rem; /* row gap 1rem, column gap 2rem */
 
+  @media (max-width: 650px) {
+    display: block;
+  }
+
   .form-group {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 
+    @media (max-width: 650px) {
+      gap: 1rem;
+    }
+
     label {
       @include body-styling;
       font-size: 13px;
       font-weight: var(--font-weight-bold);
+      @media (max-width: 650px) {
+        text-align: start;
+        font-size: 0.8rem;
+      }
     }
 
     input {

@@ -15,5 +15,13 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--lightest-grey);
+
+    .mobile__icon {
+      display: none;
+
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
   }
 }

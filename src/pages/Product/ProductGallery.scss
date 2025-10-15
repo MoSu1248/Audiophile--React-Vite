@@ -5,6 +5,11 @@
   gap: 1rem;
   width: 100%;
 
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
   img {
     border-radius: 8px;
     width: 100%;
@@ -16,16 +21,33 @@
     grid-row: 1;
     grid-column: 1;
     max-height: 300px;
+
+    @media (max-width: 650px) {
+      max-height: 300px;
+
+      grid-row: 1;
+      grid-column: 1;
+    }
   }
 
   .grid-item-2 {
     grid-row: 2;
     max-height: 300px;
     grid-column: 1;
+    @media (max-width: 650px) {
+      max-height: 300px;
+
+      grid-row: 2;
+      grid-column: 1;
+    }
   }
 
   .grid-item-3 {
     grid-row: 1 / span 2;
     grid-column: 2;
+    @media (max-width: 650px) {
+      grid-row: 3;
+      grid-column: 1;
+    }
   }
 }

@@ -17,7 +17,7 @@ function App() {
               path="/category/:slug/product/:productId"
               element={<ProductPage />}
             />
-            <Route path="/checkout" element={<CheckOut/> }></Route>
+            <Route path="/checkout" element={<CheckOut />}></Route>
           </Route>
         </Routes>
       </CartProvider>

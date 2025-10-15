@@ -6,11 +6,27 @@
   width: 70%;
   gap: 2rem;
 
+  
+
+  @media (max-width: 900px) {
+    width: 100%;
+    text-align: left;
+    padding: 2rem 0rem;
+  }
+
   h3 {
     @include h3-styling;
+    @media (max-width: 900px) {
+      width: 100%;
+      text-align: left;
+    }
   }
 
   p {
     @include body-styling(var(--lightest-grey-text));
+    @media (max-width: 900px) {
+      width: 100%;
+      text-align: left;
+    }
   }
 }

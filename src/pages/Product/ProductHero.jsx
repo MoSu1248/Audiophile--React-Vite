@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import AddProduct from "./AddProduct";
 import "./ProductHero.scss";
 import { motion } from "framer-motion";
+import { CartContext } from "../../components/CartProvider/CartProvider";
 
 export default function ProductHero({ product }) {
   (999).toLocaleString(); // "999"
@@ -11,6 +12,10 @@ export default function ProductHero({ product }) {
   function formatNumber(num) {
     return num.toLocaleString("en-US");
   }
+  const { deviceType } = useContext(CartContext);
+
+  const preview =
+    product.images.product?.[deviceType] || product.images.product?.desktop;
 
   const product_img = {
     hidden: { opacity: 0, y: 15 },
@@ -47,7 +52,7 @@ export default function ProductHero({ product }) {
         initial="hidden"
         animate="show"
       >
-        <img src={product.images.preview} alt="" />
+        <img src={preview} alt="" />
       </motion.div>
       <div className="product__content">
         <motion.div

@@ -12,6 +12,14 @@
     position: relative;
     top: -48px;
     left: 18.5%;
+
+    @media (max-width: 900px) {
+      left: 5.5%;
+    }
+
+    @media (max-width: 650px) {
+      left: 40%;
+    }
   }
 
   .wrapper {
@@ -23,12 +31,54 @@
   &__navbar {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 900px) {
+      gap: 1rem;
+    }
+
+    @media (max-width: 650px) {
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav {
+      display: block;
+      width: fit-content;
+
+      .nav__list {
+        gap: 2rem;
+
+        @media (max-width: 650px) {
+          text-align: center;
+          flex-direction: column;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+
+      .nav__list {
+        gap: 2rem;
+      }
+    }
   }
 
   .goal {
     @include body-styling;
     color: var(--grey);
     width: 45%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      text-align: left;
+    }
+
+    @media (max-width: 650px) {
+      width: 70%;
+      text-align: center;
+      margin: auto;
+    }
   }
 }
 

@@ -1,5 +1,35 @@
 @use "../../styles/index.scss" as *;
 
+.copyright-container {
+  display: flex;
+  justify-content: space-between;
+
+
+
+   @media (max-width: 650px) {
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  
+
+  .socials {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .socials {
+      display: block;
+
+      ul {
+        gap: 1rem;
+      }
+    }
+  }
+}
+
 .copyright {
   @include body-styling(var(--grey));
 }

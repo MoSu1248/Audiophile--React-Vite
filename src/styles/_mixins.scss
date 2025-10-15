@@ -9,6 +9,11 @@
   letter-spacing: map-get($map: vars.$letter-spacing, $key: h1);
   color: $color;
   text-transform: uppercase;
+
+  @media (max-width: 900px) {
+    font-size: 4rem;
+    text-align: center;
+  }
 }
 
 @mixin h2-styling($color: var(--black)) {
@@ -79,6 +84,11 @@
   font-weight: var(--font-weight-medium);
   line-height: map-get($map: vars.$line-height, $key: body);
   color: $color;
+
+  @media (max-width: 900px) {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 @mixin global-btn-styling {

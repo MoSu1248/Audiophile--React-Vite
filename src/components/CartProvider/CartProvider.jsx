@@ -3,7 +3,6 @@ import React, { createContext, useState, useEffect } from "react";
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  
   const [cart, setCart] = useState(() => {
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];
@@ -36,11 +35,34 @@ export function CartProvider({ children }) {
     );
   };
 
-  const removeAll = () => setCart([]);
+  const [deviceType, setDeviceType] = useState("desktop");
 
+  useEffect(() => {
+    function updateWindowWidth() {
+      const width = window.innerWidth;
+      if (width <= 650) setDeviceType("mobile");
+      else if (width <= 900) setDeviceType("tablet");
+      else setDeviceType("desktop");
+    }
+
+    updateWindowWidth();
+    window.addEventListener("resize", updateWindowWidth);
+    return () => window.removeEventListener("resize", updateWindowWidth);
+  }, []);
+
+  console.log(deviceType);
+
+  const removeAll = () => setCart([]);
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, updateQuantity, removeAll }}
+      value={{
+        cart,
+        addItem,
+        removeItem,
+        updateQuantity,
+        removeAll,
+        deviceType,
+      }}
     >
       {children}
     </CartContext.Provider>

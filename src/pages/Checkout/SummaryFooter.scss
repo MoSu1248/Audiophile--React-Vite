@@ -38,6 +38,10 @@
   flex-direction: column;
   gap: 1rem;
 
+  @media (max-width: 900px) {
+    text-align: left;
+  }
+
   span {
     @include h6-styling;
     float: right;
@@ -46,10 +50,10 @@
   .grandTotal {
     color: var(--orange);
   }
-  
-  .button{
+
+  .button {
     margin-top: 1rem;
-    width: 100%!important;
-    @include button-1-stying
+    width: 100% !important;
+    @include button-1-stying;
   }
 }

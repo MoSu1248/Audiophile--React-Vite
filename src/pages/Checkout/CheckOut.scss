@@ -2,7 +2,7 @@
   padding: 8rem 0;
   background-color: var(--light-grey);
 
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -11,5 +11,8 @@
   &__container {
     display: flex;
     gap: 2rem;
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
   }
 }

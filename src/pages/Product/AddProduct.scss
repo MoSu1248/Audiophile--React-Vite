@@ -4,6 +4,11 @@
   display: flex;
   height: 3rem;
   gap: 2rem;
+
+  @media (max-width: 900px) {
+    gap: 1rem;
+    width: 100%;
+  }
   .counter {
     width: 10rem;
     background-color: var(--light-grey);
@@ -11,6 +16,7 @@
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
+    height: 100%;
 
     .count {
       font-weight: var(--font-weight-bold);
@@ -25,6 +31,11 @@
       height: 2rem;
       cursor: pointer;
       pointer-events: auto;
+
+      @media (max-width: 900px) {
+        width: 50%;
+      }
+
       &:hover {
         color: var(--orange);
       }
@@ -37,5 +48,10 @@
 
   .product__btn {
     @include button-1-stying;
+    @media (max-width: 900px) {
+      padding: 1rem;
+      font-size: 0.7em;
+      width: 50%;
+    }
   }
 }

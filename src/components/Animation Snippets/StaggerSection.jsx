@@ -30,7 +30,9 @@ export default function StaggeredSection({ children, delay = 0 }) {
       className="stagger"
     >
       {React.Children.map(children, (c) => (
-        <motion.div variants={child} className="stagger-child" >{c}</motion.div>
+        <motion.div variants={child} className="stagger-child">
+          {c}
+        </motion.div>
       ))}
     </motion.div>
   );

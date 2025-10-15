@@ -1,6 +1,5 @@
 .cart-container {
-  position: relative; 
-  
+  position: relative;
 }
 
 .cart-overlay {
@@ -11,9 +10,10 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 20;
+
+ 
 }
 
-
-.cart-icon{
+.cart-icon {
   height: 1.5rem;
 }

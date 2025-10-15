@@ -1,3 +1,11 @@
-.stagger{
-    width: 100%;
+.stagger {
+  width: 100%;
+}
+
+.stagger-child {
+  @media (max-width: 900px) {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
 }

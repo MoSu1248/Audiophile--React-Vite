@@ -1,20 +1,37 @@
 .product {
   margin-top: 5rem;
   padding-bottom: 10rem;
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
+}
+
+.product > .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @media (max-width: 1200px) {
+    gap: 1rem;
   }
 }
 
 .product_info {
   display: flex;
   gap: 8rem;
+
+  @media (max-width: 1200px) {
+    padding: 4rem 0rem;
+  }
+
+  @media (max-width: 900px) {
+    gap: 1rem;
+    flex-direction: column;
+  }
 }
 
 .product {
   .view {
     margin-top: 8rem;
+    @media (max-width: 900px) {
+      margin-top: 0rem;
+    }
   }
 }

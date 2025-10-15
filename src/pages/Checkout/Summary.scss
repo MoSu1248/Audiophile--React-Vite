@@ -7,6 +7,10 @@
   background-color: var(--white);
   height: fit-content;
 
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,6 +37,11 @@
     @include body-styling;
     font-size: 12px;
     font-weight: var(--font-weight-bold);
+
+    @media (max-width: 650px) {
+      text-align: left;
+      font-size: 0.9rem;
+    }
   }
 }
 

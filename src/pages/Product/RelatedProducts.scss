@@ -7,6 +7,13 @@
     @include h3-styling;
     text-align: center;
     margin-bottom: 5rem;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      min-height: fit-content;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -14,14 +21,36 @@
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+
   .related__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+
+    .related-img__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f1f1f1f1;
+      border-radius: 8px;
+    }
+
     img {
       width: 70%;
       border-radius: 8px;
+
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+
+      @media (max-width: 650px) {
+        width: 30%;
+      }
     }
 
     h5 {
@@ -30,10 +59,29 @@
       text-align: center;
       width: 50%;
       min-height: 4rem;
+      @media (max-width: 900px) {
+        width: 100%;
+        min-height: fit-content;
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 650px) {
+        font-size: 1.2rem;
+      }
     }
 
     .button {
       @include button-1-stying;
+      text-align: center;
+
+      @media (max-width: 900px) {
+        width: 80%;
+      }
+
+      @media (max-width: 650px) {
+        font-size: 0.7rem;
+        width: 50%;
+      }
     }
   }
 }
