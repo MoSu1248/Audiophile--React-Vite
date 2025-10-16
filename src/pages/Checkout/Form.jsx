@@ -5,11 +5,11 @@ import Details from "./Details";
 import './Form.scss'
 export default function Form() {
   return (
-    <form className="form__wrapper">
+    <div className="form__wrapper">
       <h3>Check Out</h3>
       <Details />
       <Shipping />
       <Payment />
-    </form>
+    </div>
   );
 }

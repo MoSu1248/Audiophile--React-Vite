@@ -14,6 +14,11 @@
 
   @media (max-width: 900px) {
     flex-direction: column;
+    gap: 3rem;
+  }
+
+  @media (max-width: 650px) {
+    gap: 2rem;
   }
 
   .product__img {

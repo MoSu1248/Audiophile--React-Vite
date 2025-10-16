@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Logo from "../Logo/Logo";
 import Cart from "../Cart/Cart";
@@ -9,16 +9,21 @@ import "./Navbar.scss";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  function MobileClickHandler() {
+    setOpen(!open);
+    document.querySelector("body").classList.toggle("disabled");
+  }
+
   return (
     <header className="navbar">
+      {open && <MobileNav setOpen={MobileClickHandler} />}
       <div className=" wrapper navbar__container">
-      {/* {open && <MobileNav />} */}
         <img
           className="mobile__icon"
           src={MobileMenuIcon}
           alt=""
           onClick={() => {
-            setOpen(!open);
+            MobileClickHandler();
           }}
         />
         <Logo />

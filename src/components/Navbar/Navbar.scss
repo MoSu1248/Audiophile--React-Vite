@@ -6,8 +6,12 @@
   width: 100%;
   background-color: var(--dark-grey);
   height: 10vh;
-  z-index: 2;
+  z-index: 3;
   position: relative;
+
+  @media (max-width: 650px) {
+    background-color: transparent;
+  }
 
   .navbar__container {
     height: 100%;
@@ -15,6 +19,12 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--lightest-grey);
+
+    @media (max-width: 650px) {
+      width: 100%;
+      background-color: var(--dark-grey);
+      padding: 0 2rem;
+    }
 
     .mobile__icon {
       display: none;
@@ -24,4 +34,8 @@
       }
     }
   }
+}
+
+.disabled {
+  overflow: hidden;
 }

@@ -53,5 +53,9 @@
       font-size: 0.7em;
       width: 50%;
     }
+
+    @media (max-width: 900px) {
+      max-width: 10rem;
+    }
   }
 }

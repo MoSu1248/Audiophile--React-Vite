@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SummaryFooter.scss";
+import { CartContext } from "../../components/CartProvider/CartProvider";
 
 export default function SummaryFooter({ formatNumber, cart }) {
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const VAT_RATE = 0.15; // 15%
-  const vat = total * VAT_RATE;
-  const shipping = 50;
-  const grandTotal = total + shipping;
+  const { vat, shipping, total, grandTotal } = useContext(CartContext);
 
   return (
     <div className="summary-text__container">
@@ -23,7 +20,9 @@ export default function SummaryFooter({ formatNumber, cart }) {
         Grand Total
         <span className="grandTotal">${formatNumber(grandTotal)}</span>
       </p>
-      <button className="button">Continue & Pay</button>
+      <button type="submit" className="button">
+        Continue & Pay
+      </button>
     </div>
   );
 }

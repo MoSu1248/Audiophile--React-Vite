@@ -50,7 +50,11 @@ export function CartProvider({ children }) {
     return () => window.removeEventListener("resize", updateWindowWidth);
   }, []);
 
-  console.log(deviceType);
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const VAT_RATE = 0.15; // 15%
+  const vat = total * VAT_RATE;
+  const shipping = 50;
+  const grandTotal = total + shipping;
 
   const removeAll = () => setCart([]);
   return (
@@ -62,6 +66,11 @@ export function CartProvider({ children }) {
         updateQuantity,
         removeAll,
         deviceType,
+
+        vat,
+        shipping,
+        total,
+        grandTotal,
       }}
     >
       {children}

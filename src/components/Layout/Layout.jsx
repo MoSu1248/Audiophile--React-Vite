@@ -4,7 +4,6 @@ import Footer from "../Footer/Footer";
 import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import MobileNav from "../MobileNav/MobileNav";
 
 export default function Layout() {
   const currentLocation = useLocation();
@@ -14,7 +13,6 @@ export default function Layout() {
 
   return (
     <div>
-      <MobileNav /> 
       <Navbar />
       <main className="content-wrapper">
         <Outlet />

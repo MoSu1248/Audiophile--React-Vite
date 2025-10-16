@@ -2,6 +2,11 @@
   height: fit-content;
   padding-bottom: 8rem;
   margin-top: 6rem;
+
+  @media (max-width: 650px) {
+    padding: 1rem 0;
+  }
+
   .wrapper {
     height: 100%;
     display: flex;

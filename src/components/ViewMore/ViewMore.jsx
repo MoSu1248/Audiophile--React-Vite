@@ -7,28 +7,25 @@ import StaggeredSection from "../../components/Animation Snippets/StaggerSection
 import { motion } from "framer-motion";
 
 import "./ViewMore.scss";
-export default function ViewMore() {
+export default function ViewMore({ setOpen }) {
+  const catagoryButtons = [
+    { title: "Headphone", img: HeadPhone, url: "/category/headphones" },
+    { title: "Speaker", img: Speaker, url: "/category/speakers" },
+    { title: "Earphone", img: EarPhone, url: "/category/earphones" },
+  ];
+
   return (
     <section className="view">
       <div className="wrapper">
-        <Card
-          title={"Headphone"}
-          img={HeadPhone}
-          url={"/category/headphones"}
-          index={1}
-        />
-        <Card
-          title={"Speaker"}
-          img={Speaker}
-          url={"/category/speakers"}
-          index={2}
-        />
-        <Card
-          title={"Earphone"}
-          img={EarPhone}
-          url={"/category/earphones"}
-          index={3}
-        />
+        {catagoryButtons.map((item, index) => (
+          <Card
+            title={item.title}
+            img={item.img}
+            url={item.url}
+            key={index}
+            setOpen={setOpen}
+          />
+        ))}
       </div>
     </section>
   );
