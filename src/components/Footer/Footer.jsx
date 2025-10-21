@@ -3,7 +3,7 @@ import Nav from "../Navbar/Nav";
 import Logo from "../Logo/Logo";
 import "./Footer.scss";
 import Socials from "./Socials";
-import Copyright from "./copyright";
+import Copyright from "./Copyright";
 export default function Footer() {
   return (
     <footer className="footer">
